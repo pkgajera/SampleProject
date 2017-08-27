@@ -1,0 +1,57 @@
+<template name="appLayout">
+	<div class="loading">
+        {{>loading}}
+    </div>
+	<!-- Header -->
+	<div class="header w3layouts agileits" id="home">
+
+		<!-- Navigation -->
+		<div class="navigation w3layouts agileits headerFixed">
+			<nav class="navbar w3layouts agileits navbar-inverse navbar-default">
+				<div class="container">
+					<div class="navbar-header w3layouts agileits">
+						<button type="button" class="navbar-toggle w3layouts agileits collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only w3layouts agileits">Toggle navigation</span>
+							<span class="icon-bar w3layouts agileits"></span>
+							<span class="icon-bar w3layouts agileits"></span>
+							<span class="icon-bar w3layouts agileits"></span>
+						</button>
+						<a class="navbar-brand w3layouts agileits" href="{{pathFor 'home'}}">Sample Project</a>
+					</div>
+					<div id="navbar" class="navbar-collapse w3layouts agileits collapse">
+						<ul class="nav navbar-nav w3layouts agileits navbar-right">
+							{{#if currentUser}}
+							<li class="w3layouts agileits"><a href="{{pathFor 'home'}}"><i class="fa fa-tachometer" aria-hidden="true"></i> Home</a></li>
+							
+	            <li class="w3layouts agileits dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, {{currentUser.profile.name}} <b class="caret"></b></a>
+	                <ul class="dropdown-menu" style="z-index:100;">
+	                    <!-- <li><a href="{{pathFor 'userprofile'}}"><i class="fa fa-user-o" aria-hidden="true"></i> My Profile</a></li> -->
+	                    <li class="divider"></li>
+	                    <li class="w3layouts agileits logout"><a href="#" class="scroll"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+	                </ul>
+	            </li>
+							{{else}}
+							<li class="w3layouts agileits signin"><a class="scroll" href="{{pathFor 'UserLogin'}}">SIGNIN</a></li>
+							<li class="w3layouts agileits signup"><a class="scroll" href="{{pathFor 'UserRegister'}}">SIGNUP</a></li>
+							{{/if}}
+							<!-- <li class="w3layouts agileits"><a class="scroll" href="#stats">STATS</a></li> -->
+							<!-- <li class="w3layouts agileits"><a class="scroll" href="#details">DETAILS</a></li> -->
+							<!-- <li class="w3layouts agileits"><a class="scroll" href="#portfolio">PORTFOLIO</a></li> -->
+							<!-- <li class="w3layouts agileits"><a class="scroll" href="#contact">CONTACT</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- //Navigation -->
+	</div>
+	<!-- //Header -->
+
+	<div class="about w3layouts agileits" id="about">
+		<div class="container">
+			  {{>yield}}
+		</div>
+	</div>
+
+
+</template>

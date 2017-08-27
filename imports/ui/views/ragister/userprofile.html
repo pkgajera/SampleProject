@@ -1,0 +1,16 @@
+<template name="userprofile">
+  <div class="main-w3l" style="padding: 40px 0 170px 0;">
+      <div class="w3layouts-main">
+          <h2>Profile</h2>
+          <form id="profileForm">
+              <input value="{{userDetail.profile.name}}" name="name" type="text" placeholder="Name" required="" class="validationRequired registerField" style="padding: 15px 0px 15px 42px;" />
+              <input value="{{userDetail.profile.mobileNo}}" name="mobile" type="text" placeholder="Mobile Number" required="" class="registerField" maxlength="10" style="padding: 15px 0px 15px 42px;" disabled="disabled"/>
+              <input value="{{userDetail.profile.refferalCode}}" name="refferalCode" type="text" placeholder="RefferalCode"  class="registerField" style="padding: 15px 0px 15px 42px;" disabled="disabled"/>
+              <div class="clear"></div>
+              <input type="submit" value="Update" name="update">
+          </form>
+          <p><a href="{{pathFor 'changepassword'}}">Change Password</a></p>
+      </div>
+  </div>
+  {{loadFormValidationMessage}}
+</template>

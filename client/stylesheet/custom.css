@@ -1,0 +1,58 @@
+.parsley-required, .parsley-type, .parsley-equalto, .parsley-pattern {
+    color: #ce2222 !important;
+    width: 100% !important;
+    float: left;
+}
+/*    --------------------------------------------------
+	:: Login Section
+	-------------------------------------------------- */
+#login, #register {
+    padding-top: 50px
+}
+#login .form-wrap, #register .form-wrap {
+    width: 30%;
+    margin: 0 auto;
+}
+#login .loginHader, #register .registerHader{
+    color: #1fa67b;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#login .form-group, #register .form-group {
+    margin-bottom: 25px;
+}
+
+#login .btn.btn-custom, #register .btn.btn-custom {
+    font-size: 14px;
+	margin-bottom: 20px;
+}
+#login .forget, #register .forget {
+    font-size: 13px;
+	text-align: center;
+	display: block;
+}
+
+/*    --------------------------------------------------
+	:: Inputs & Buttons
+	-------------------------------------------------- */
+.form-control {
+    color: #212121;
+}
+.btn-custom {
+    color: #fff;
+	background-color: #1fa67b;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    color: #fff;
+}
+
+
+.headerFixed{
+  position: fixed;
+  width:100%;
+  z-index:1;
+  background: #ffffff;
+}
